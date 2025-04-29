@@ -27,7 +27,8 @@ helm install todoapp helm-chart/todoapp
 
 # Wait for all resources to be ready
 echo "Waiting for all resources to be ready..."
-sleep 30
+kubectl wait --for=condition=Available deployment/todoapp --timeout=120s -n your-namespace
+
 
 # Get all resources and save to output.log
 echo "Getting all resources and saving to output.log..."
