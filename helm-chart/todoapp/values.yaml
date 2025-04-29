@@ -19,10 +19,9 @@ rollingUpdate:
   maxUnavailable: 0
 
 secrets:
-  - name: DB_USER
-    value: user
-  - name: DB_PASSWORD
-    value: password
+  DB_USER: user
+  DB_PASSWORD: password
+
 
 nodeAffinity:
   key: "kubernetes.io/hostname"
